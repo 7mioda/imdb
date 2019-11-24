@@ -1,21 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import { Global } from '@emotion/core';
 import { restCss, getTheme } from '../theme';
 import AppWrapper from './AppWrapper';
+import useTheme from '../shared/hooks/useTheme';
 
 
 function App() {
-  const [prefersColorScheme, setPrefersColorScheme] = useState(() => localStorage.getItem('prefers-color-scheme') || 'light');
-
-  useEffect(() => localStorage.setItem('prefers-color-scheme', prefersColorScheme), [prefersColorScheme]);
-
-  const onClick = () => prefersColorScheme === 'dark' ? setPrefersColorScheme('light') : setPrefersColorScheme('dark');
+  const [prefersColorScheme, toggleColorScheme] = useTheme('light');
   return (
     <ThemeProvider theme={getTheme(prefersColorScheme)}>
       <Global styles={restCss} />
       <AppWrapper>
-        <button type="button" onClick={onClick}> {prefersColorScheme} </button>
+        <button type="button" onClick={toggleColorScheme}> {prefersColorScheme} </button>
        Learn React
       </AppWrapper>
     </ThemeProvider>
