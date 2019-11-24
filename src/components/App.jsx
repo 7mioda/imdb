@@ -4,6 +4,7 @@ import { Global } from '@emotion/core';
 import { restCss, getTheme } from '../theme';
 import AppWrapper from './AppWrapper';
 import useTheme from '../shared/hooks/useTheme';
+import Routes from './Routes';
 
 
 function App() {
@@ -12,8 +13,8 @@ function App() {
     <ThemeProvider theme={getTheme(prefersColorScheme)}>
       <Global styles={restCss} />
       <AppWrapper>
-        <button type="button" onClick={toggleColorScheme}> {prefersColorScheme} </button>
-       Learn React
+        <button className="scheme-pref-btn" type="button" onClick={toggleColorScheme}> {prefersColorScheme} </button>
+        <Routes />
       </AppWrapper>
     </ThemeProvider>
   );
