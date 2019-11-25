@@ -1,10 +1,8 @@
 export default {
-  background: {
-    primary: '#200f21',
-    secondary: '#382039',
-  },
-  color: {
-    primary: '#ffd668',
-    secondary: '#e4e4e4',
+  colors: {
+    primary: '#1f1f1f',
+    secondary: '#121212',
+    pink: '#f5c518',
+    tertiary: '#ffffff',
   },
 };

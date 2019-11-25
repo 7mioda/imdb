@@ -1,3 +1,5 @@
 export default {
-  fontFamily: 'Roboto, sans-serif',
+  fontFamily: {
+    primary: 'Roboto, sans-serif',
+  },
 };
