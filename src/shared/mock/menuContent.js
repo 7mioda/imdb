@@ -4,11 +4,11 @@ export default [{
   list: [
     {
       title: 'showtimes & tickets',
-      link: '/filmify/movie-details/1',
+      link: '/filmify/showtimes',
     },
     {
-      title: 'showtimes & tickets',
-      link: '/filmify/movie-details/1',
+      title: 'top rated movies',
+      link: '/filmify/top',
     },
     {
       title: 'showtimes & tickets',
