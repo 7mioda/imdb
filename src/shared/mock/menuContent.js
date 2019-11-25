@@ -11,11 +11,11 @@ export default [{
       link: '/filmify/top',
     },
     {
-      title: 'showtimes & tickets',
-      link: '/filmify/movie-details/1',
+      title: 'most popular movies',
+      link: '/filmify/popular',
     },
     {
-      title: 'showtimes & tickets',
+      title: 'most popular movies',
       link: '/filmify/movie-details/1',
     },
     {

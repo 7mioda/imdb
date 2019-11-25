@@ -17,7 +17,7 @@ export default (component) => styled(component)`
     display: inline-block;
     height: 2px;
     width: 0;
-    background: ${({ theme: { colors: { pink } } }) => pink};
+    background: ${({ theme: { colors: { yellow } } }) => yellow};
     transition: width ease-in-out 0.7s;
   }
   &:hover:after {
@@ -32,6 +32,7 @@ export default (component) => styled(component)`
     font-weight: 600;
     background: transparent;
     cursor: pointer;
+    font-size: 1rem;
   }
   .menu-item__dropdown {
     position: absolute;
