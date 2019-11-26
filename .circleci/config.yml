@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Deploy Master to Heroku
           command: |
-              git push https://heroku:78ca4deb-d275-49ab-ba7a-fbe417ef8d46@git.heroku.com/filmify-front.git master
+              git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
 workflows:
   version: 2
   build-deploy:
