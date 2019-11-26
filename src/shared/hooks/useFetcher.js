@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import NProgress from 'nprogress';
 import axios from 'axios';
 import { stringify } from 'querystring';
