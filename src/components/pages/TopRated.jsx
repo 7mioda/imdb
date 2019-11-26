@@ -2,7 +2,7 @@ import React from 'react';
 import Page from '../organisms/Page/Page';
 import useFetcher from '../../shared/hooks/useFetcher';
 import Paginator from '../Paginator/Paginator';
-import useQueryParams from "../../shared/hooks/useQueryParams";
+import useQueryParams from '../../shared/hooks/useQueryParams';
 
 export default (props) => {
   const query = useQueryParams(props);
