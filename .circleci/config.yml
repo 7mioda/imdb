@@ -23,9 +23,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       # run tests!
       - run: yarn test
-    deploy:
-      docker:
-        - image: buildpack-deps:trusty
+  deploy:
+    docker:
+      - image: buildpack-deps:trusty
       steps:
         - checkout
         - run:
