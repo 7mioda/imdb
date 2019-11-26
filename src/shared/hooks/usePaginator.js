@@ -6,7 +6,7 @@ const usePaginator = (count, nbrPerPage) => {
   const { location: { pathname } } = history;
   const setNextPage = (toPage) => {
     if ((toPage <= pageCount) && (toPage > 0)) {
-      history.push(`${pathname}?=page${toPage}`);
+      history.push(`${pathname}?page=${toPage}`);
     }
   };
   return ({ setNextPage, pageCount });
