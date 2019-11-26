@@ -9,11 +9,19 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.17",
+    "@emotion/styled": "^10.0.17",
+    "axios": "latest",
+    "emotion-theming": "^10.0.19",
+    "lodash": "^4.17.15",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.7.2",
+    "querystring": "^0.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
-    "@emotion/core": "^10.0.17",
-    "@emotion/styled": "^10.0.17"
+    "react-transition-group": "^4.3.0"
   },
   "devDependencies": {
     "eslint-config-airbnb": "17.1.0",
