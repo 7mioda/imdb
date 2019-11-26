@@ -23,10 +23,10 @@ const useFetcher = ({
         const { data: response } = await instance({
           method, url: `${url}?${stringify({ api_key: REACT_APP_API_V3_KEY, ...queryString })}`, cancelToken: source.token, data,
         });
-        setState((state) => ({ ...state, data: response, loading: false }));
+        setState(setState({ ...state, data: response, loading: false }));
         done();
       } catch (error) {
-        setState((state) => ({ ...state, error, loading: false }));
+        setState(setState({ ...state, error, loading: false }));
         done();
       }
     })();
