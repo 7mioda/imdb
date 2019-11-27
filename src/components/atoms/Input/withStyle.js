@@ -7,15 +7,20 @@ export default (component) => styled(component)`
   
   input {
     border: 1px solid rgba(128, 128, 128, 0.32);
-    width: 90%;
+    width: 100%;
     height: ${({ height }) => height || '100%'};
     border-radius: 5px;
     color: ${({ theme: { colors: { tertiary } } }) => tertiary};
     background-color: ${({ theme: { colors: { primary } } }) => primary};
-    padding: ${({ padding }) => padding || '0 20px'};
     font-family: inherit;
+    &:focus {
+      background-color: ${({ theme: { colors: { secondary } } }) => secondary};
+    }
   }
   .highlighted {
+      &:focus {
+          border-color: #fff;
+      }
   }
   .highlighted:focus {
     border: 1px solid rgba(128, 128, 128, 0.9);
@@ -37,7 +42,6 @@ export default (component) => styled(component)`
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 10%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
