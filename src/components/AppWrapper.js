@@ -9,7 +9,7 @@ export default styled.div`
     height: 1000px;
     .scheme-pref-btn {
       position: absolute;
-      top: 5px;
+      top: 60px;
       left: 5px;
       z-index: 1;
     }

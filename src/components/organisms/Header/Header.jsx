@@ -20,6 +20,11 @@ const Header = ({ className }) => (
     <div className="Header__search">
       <SearchInput />
     </div>
+    <Menu className="header__menu">
+      <MenuItem title="IMDBPro" />
+      <MenuItem title="Watchlist" />
+      <MenuItem title="Menu" />
+    </Menu>
   </div>
 );
 
