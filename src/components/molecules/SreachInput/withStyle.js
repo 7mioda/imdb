@@ -7,6 +7,7 @@ export default (component) => styled(component)`
       position: absolute;
       top: 101%;
       width: 100%;
-      background-color: ${({ theme: { colors: { secondary } } }) => secondary};;
+      background-color: ${({ theme: { colors: { secondary } } }) => secondary};
+      z-index: 1;
   }
 `;

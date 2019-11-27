@@ -3,7 +3,7 @@ import * as PropTypes from 'prop-types';
 import withStyle from './withStyle';
 import buildClassName from '../../../shared/utils/buildClassName';
 import useOnClickOutside from '../../../shared/hooks/useOnClickOutside';
-import useOnRouterChange from "../../../shared/hooks/useOnRouterChange";
+import useOnRouterChange from '../../../shared/hooks/useOnRouterChange';
 
 export const MenuContext = createContext({
   activeItem: 'none',

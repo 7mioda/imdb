@@ -5,6 +5,7 @@ import SearchInput from '../../molecules/SreachInput/SearchInput';
 import MenuContent from '../../molecules/MenuContent/MenuContent';
 import menuContent from '../../../shared/mock/menuContent';
 import Link from '../../atoms/Link/Link';
+import SearchNSuggestion from "../SearchNSuggestion/SearchNSuggestion";
 
 
 const Header = ({ className }) => (
@@ -18,7 +19,7 @@ const Header = ({ className }) => (
       </MenuItem>
     </Menu>
     <div className="Header__search">
-      <SearchInput />
+      <SearchNSuggestion />
     </div>
     <Menu className="header__menu">
       <MenuItem title="IMDBPro" />

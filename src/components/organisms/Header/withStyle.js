@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 export default (component) => styled(component)`
-    position: fixed;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
