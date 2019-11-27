@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 export default (component) => styled(component)`
-    position: fixed;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -14,7 +13,7 @@ export default (component) => styled(component)`
     box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
     color: ${({ theme: { colors: { tertiary } } }) => tertiary};
     .Header__search {
-      width: 30%;
+      width: 60%;
     }
     
     .header__menu {

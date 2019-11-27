@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 
 import withStyle from './withStyle';
 
-const Page = ({ className, children ,title }) => {
+const Page = ({ className, children, title }) => {
   useEffect(() => {
     document.title = title;
-    //return () => { document.title = 'loading'; };
+    return () => { document.title = 'loading'; };
   }, [title]);
 
   return (
@@ -15,4 +15,4 @@ const Page = ({ className, children ,title }) => {
   );
 };
 
-export default withStyle(Page);
+export default memo(withStyle(Page));

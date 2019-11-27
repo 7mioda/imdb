@@ -2,6 +2,9 @@ import styled from '@emotion/styled';
 
 
 export default (component) => styled(component)`
-  padding-top: 60px;
-  color: ${({ theme: { colors: { tertiary } } }) => tertiary};
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 60px;
+    color: ${({ theme: { colors: { tertiary } } }) => tertiary};
 `;

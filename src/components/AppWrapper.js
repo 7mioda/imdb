@@ -6,10 +6,9 @@ export default styled.div`
     background-color: ${({ theme: { colors: { primary } } }) => primary};
     font-family: ${({ theme: { fontFamily: { primary } } }) => primary};
     width: 100%;
-    height: 1000px;
     .scheme-pref-btn {
       position: absolute;
-      top: 5px;
+      top: 100px;
       left: 5px;
       z-index: 1;
     }
