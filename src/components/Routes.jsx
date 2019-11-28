@@ -8,8 +8,16 @@ import TopRated from './pages/TopRated';
 import Showtimes from './pages/Showtimes';
 import MostPopular from './pages/MostPopular';
 import NotFound from './pages/NotFound';
+import useOnRouterChange from '../shared/hooks/useOnRouterChange';
 
 export default () => {
+  useOnRouterChange(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  });
   return (
     <Switch>
       <Route path="/filmify" exact component={Home} />
