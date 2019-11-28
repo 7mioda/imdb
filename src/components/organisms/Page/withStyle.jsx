@@ -7,4 +7,5 @@ export default (component) => styled(component)`
     justify-content: center;
     padding-top: 60px;
     color: ${({ theme: { colors: { tertiary } } }) => tertiary};
+    min-height: 100vh;
 `;

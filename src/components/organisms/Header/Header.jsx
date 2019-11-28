@@ -24,7 +24,7 @@ const Header = ({ className }) => (
     <Menu className="header__menu">
       <MenuItem title="IMDBPro" />
       <MenuItem title="Watchlist" />
-      <MenuItem title="Menu" />
+      <MenuItem title="User" />
     </Menu>
   </div>
 );

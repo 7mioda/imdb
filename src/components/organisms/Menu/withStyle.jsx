@@ -12,6 +12,7 @@ export default (component) => styled(component)`
     font-weight: 400;
     background: transparent;
     transition: all .5s ease-in;
+
   
   .left {
     justify-content: flex-start;

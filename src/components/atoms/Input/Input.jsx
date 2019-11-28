@@ -9,13 +9,13 @@ const Input = (props) => {
   } = props;
   const defaultClasses = ['rounded', 'highlighted'];
   return (
-    <div className={`${className} ${buildClassName(props)}`}>
+    <div className={`${className} ${buildClassName(props, defaultClasses)}`}>
       {Prefix && (
         <div className="prefix">
           <Prefix.type {...Prefix.props} />
         </div>
       )}
-      <input type="text" {...rest} className={`input ${buildClassName(props, defaultClasses)}`} />
+      <input type="text" {...rest} />
       {Suffix && (
         <div className="suffix">
           <Suffix.type {...Suffix.props} />

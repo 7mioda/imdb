@@ -6,5 +6,6 @@ export default (component) => styled(component)`
     justify-content: center;
     align-items: center;
     font-size: 4rem;
+    height: 100vh;
     
 `;

@@ -12,7 +12,14 @@ const SearchInput = ({ className, suggestions, ...rest }) => {
   useOnClickOutside(ref, () => setShowSuggestion(false));
   return (
     <div ref={ref} className={`${className}`}>
-      <Input highlighted height="30px" onFocus={() => setShowSuggestion(true)} {...rest} placeholder="    Search IMDb" Suffix={(<SearchIcon />)} />
+      <Input
+        highlighted
+        height="30px"
+        onFocus={() => setShowSuggestion(true)}
+        placeholder="Search IMDb"
+        Suffix={(<SearchIcon />)}
+        {...rest}
+      />
       {suggestions && showSuggestion && (
         <div className="search__suggestion">
           {suggestions.slice(0, 10).map((suggestion) => (
