@@ -32,7 +32,6 @@ export default (component) => styled(component)`
   .prefix {
     position: absolute;
     height: 100%;
-    width: 10%;
     top: 50%;
     transform: translateY(-50%);
     left: 0;

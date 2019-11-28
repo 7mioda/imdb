@@ -36,7 +36,6 @@ export default (component) => styled(component)`
   }
   .menu-item__dropdown {
     position: absolute;
-    left: -100%;
     top: 104%;
     background: ${({ theme: { colors: { secondary } } }) => secondary};
     width: auto;

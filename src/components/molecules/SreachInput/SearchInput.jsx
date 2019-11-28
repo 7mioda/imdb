@@ -4,6 +4,9 @@ import SearchIcon from '../../atoms/SearchIcon/SearchIcon';
 import withStyle from './withStyle';
 import SearchResultItem from '../SearchResult/SearchResultItem';
 import useOnClickOutside from '../../../shared/hooks/useOnClickOutside';
+import { Menu, MenuItem } from '../../organisms/Menu';
+import MenuContent from '../MenuContent/MenuContent';
+import menuContent from '../../../shared/mock/menuContent';
 
 
 const SearchInput = ({ className, suggestions, ...rest }) => {
@@ -12,7 +15,14 @@ const SearchInput = ({ className, suggestions, ...rest }) => {
   useOnClickOutside(ref, () => setShowSuggestion(false));
   return (
     <div ref={ref} className={`${className}`}>
-      <Input highlighted height="30px" onFocus={() => setShowSuggestion(true)} {...rest} placeholder="    Search IMDb" Suffix={(<SearchIcon />)} />
+      <Input
+        highlighted
+        height="30px"
+        onFocus={() => setShowSuggestion(true)}
+        placeholder="    Search IMDb"
+        Suffix={(<SearchIcon />)}
+        {...rest}
+      />
       {suggestions && showSuggestion && (
         <div className="search__suggestion">
           {suggestions.slice(0, 10).map((suggestion) => (
