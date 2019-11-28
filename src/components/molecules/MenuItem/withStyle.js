@@ -24,12 +24,13 @@ export default (component) => styled(component)`
     width: 100%;
   }
   .menu-item__title {
+    font-family: inherit;
     height: 100%;
     width: 100%;
     border: none;
     color: ${({ theme: { colors: { tertiary } } }) => tertiary};
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
     background: transparent;
     cursor: pointer;
     font-size: 1rem;

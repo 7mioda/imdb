@@ -4,7 +4,7 @@ import SearchInput from '../../molecules/SreachInput/SearchInput';
 import useFetcher from '../../../shared/hooks/useFetcher';
 import { Menu, MenuItem } from '../Menu';
 import searchTopics from '../../../shared/mock/searchTopics';
-import withStyle from "./withStyle";
+import withStyle from './withStyle';
 
 
 const SearchNSuggestion = ({ className }) => {
@@ -22,7 +22,15 @@ const SearchNSuggestion = ({ className }) => {
           <MenuItem title={searchTopic.title}>
             <ul>
               {searchTopics
-                .map((topic) => (<li onClick={() => setSearchTopic(topic)}>{topic.title}</li>))}
+                .filter(({ title }) => title !== searchTopic.title )
+                .map((topic) => (
+                  <li onClick={() => setSearchTopic(topic)}>
+                    <span>
+                      <img src={topic.icon} alt="" />
+                      <h4>{topic.title}</h4>
+                    </span>
+                  </li>
+                ))}
             </ul>
           </MenuItem>
         </Menu>

@@ -4,9 +4,6 @@ import SearchIcon from '../../atoms/SearchIcon/SearchIcon';
 import withStyle from './withStyle';
 import SearchResultItem from '../SearchResult/SearchResultItem';
 import useOnClickOutside from '../../../shared/hooks/useOnClickOutside';
-import { Menu, MenuItem } from '../../organisms/Menu';
-import MenuContent from '../MenuContent/MenuContent';
-import menuContent from '../../../shared/mock/menuContent';
 
 
 const SearchInput = ({ className, suggestions, ...rest }) => {
@@ -19,7 +16,7 @@ const SearchInput = ({ className, suggestions, ...rest }) => {
         highlighted
         height="30px"
         onFocus={() => setShowSuggestion(true)}
-        placeholder="    Search IMDb"
+        placeholder="Search IMDb"
         Suffix={(<SearchIcon />)}
         {...rest}
       />
