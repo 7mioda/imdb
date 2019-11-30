@@ -30,11 +30,15 @@ Input.propTypes = {
   Prefix: PropTypes.element,
   Suffix: PropTypes.element,
   classNames: PropTypes.array,
+  highlighted: PropTypes.bool,
+  rounded: PropTypes.bool,
 };
 
 Input.defaultProps = {
   Prefix: undefined,
   Suffix: undefined,
+  rounded: false,
+  highlighted: false,
   classNames: [],
 };
 

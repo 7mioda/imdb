@@ -26,8 +26,8 @@ const SearchInput = ({
       />
       {suggestions && showSuggestion && (
         <div className="search__suggestion">
-          {suggestions.slice(0, 10).map((suggestion) => (
-            <SearchResultItem data={suggestion} topic={topic} />
+          {suggestions.slice(0, 10).map((suggestion, index) => (
+            <SearchResultItem key={index.toString()} data={suggestion} topic={topic} />
           ))}
         </div>
       )}

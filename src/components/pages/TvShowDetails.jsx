@@ -6,7 +6,7 @@ import useFetcher from '../../shared/hooks/useFetcher';
 export default () => {
   const { showId } = useParams();
   console.log(showId);
-  const { data, loading, error } = useFetcher({ url: `/tv/${showId}` });
+  const { data } = useFetcher({ url: `/tv/${showId}` });
   console.log(data);
   return (
     <Page>

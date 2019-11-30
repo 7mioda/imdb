@@ -9,8 +9,7 @@ import Card from '../molecules/Card/Card';
 const MostPopular = (props) => {
   const query = useQueryParams(props);
   const page = query.get('page');
-  const { data, loading, error } = useFetcher({ url: '/movie/popular', queryString: { page } });
-  console.log('fetcg', data, loading, error);
+  const { data } = useFetcher({ url: '/movie/popular', queryString: { page } });
   return (
     <Page {...props} title="Most Popular Movies - IMDb">
       <div
@@ -25,7 +24,7 @@ const MostPopular = (props) => {
           display: 'flex', flexWrap: 'wrap', width: '100%', justifyContent: 'center', margin: '25px',
         }}
       >
-        <Paginator count={1000} nbrPerPage={20} activePage={page} />
+        { data && <Paginator count={get(data, 'total_results', 1)} nbrPerPage={20} activePage={page} />}
       </div>
     </Page>
   );

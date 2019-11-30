@@ -9,8 +9,7 @@ import Card from '../molecules/Card/Card';
 export default (props) => {
   const query = useQueryParams(props);
   const page = query.get('page');
-  const { data, loading, error } = useFetcher({ url: '/movie/top_rated', queryString: { page } });
-    get(data, 'total_results', 0);
+  const { data } = useFetcher({ url: '/movie/top_rated', queryString: { page } });
   return (
     <Page title="IMDb Rop 250 - IMDb">
       <div

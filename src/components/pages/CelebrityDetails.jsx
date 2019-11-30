@@ -6,7 +6,7 @@ import useFetcher from '../../shared/hooks/useFetcher';
 export default () => {
   const { celebrityId } = useParams();
   console.log(celebrityId);
-  const { data, loading, error } = useFetcher({ url: `/person/${celebrityId}` });
+  const { data } = useFetcher({ url: `/person/${celebrityId}` });
   console.log(data);
   return (
     <Page>

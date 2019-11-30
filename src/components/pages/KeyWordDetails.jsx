@@ -6,7 +6,7 @@ import useFetcher from '../../shared/hooks/useFetcher';
 export default () => {
   const { keywordId } = useParams();
   console.log(keywordId);
-  const { data, loading, error } = useFetcher({ url: `/keyword/${keywordId}` });
+  const { data } = useFetcher({ url: `/keyword/${keywordId}` });
   console.log(data);
   return (
     <Page>

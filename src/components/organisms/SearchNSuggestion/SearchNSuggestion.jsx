@@ -10,7 +10,7 @@ import withStyle from './withStyle';
 const SearchNSuggestion = ({ className }) => {
   const [query, setQuery] = useState('');
   const [searchTopic, setSearchTopic] = useState(searchTopics[0]);
-  const { data, loading, error } = useFetcher({ url: `/search/${searchTopic.value}`, queryString: { query } });
+  const { data } = useFetcher({ url: `/search/${searchTopic.value}`, queryString: { query } });
   const suggestions = get(data, 'results', []);
   return (
     <SearchInput
@@ -24,8 +24,8 @@ const SearchNSuggestion = ({ className }) => {
             <ul>
               {searchTopics
                 .filter(({ title }) => title !== searchTopic.title )
-                .map((topic) => (
-                  <li onClick={() => setSearchTopic(topic)}>
+                .map((topic, index) => (
+                  <li key={index.toString()} onClick={() => setSearchTopic(topic)}>
                     <span>
                       <img src={topic.icon} alt="" />
                       <h4>{topic.title}</h4>

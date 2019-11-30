@@ -6,7 +6,7 @@ import useFetcher from '../../shared/hooks/useFetcher';
 export default () => {
   const { movieId } = useParams();
   console.log(movieId);
-  const { data, loading, error } = useFetcher({ url: `/movie/${movieId}` });
+  const { data } = useFetcher({ url: `/movie/${movieId}` });
   console.log(data);
   return (
     <Page>
