@@ -17,6 +17,7 @@ const SearchNSuggestion = ({ className }) => {
       value={query}
       onChange={({ target: { value } }) => setQuery(value)}
       suggestions={suggestions}
+      topic={searchTopic.value}
       Prefix={(
         <Menu className={`${className}`}>
           <MenuItem title={searchTopic.title}>
