@@ -10,7 +10,6 @@ const Paginator = ({
     getPreviousSlice, getNextSlice,
     setNextPage, pages, sliceIndex,
   } = usePaginator(count, nbrPerPage);
-  console.log(sliceIndex);
   return (
     <div className={`${className}`}>
       { (sliceIndex > 0) && (<button type="button" onClick={() => getPreviousSlice()}> {'<<'} </button>)}
