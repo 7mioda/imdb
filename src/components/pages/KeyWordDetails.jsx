@@ -4,13 +4,13 @@ import Page from '../organisms/Page/Page';
 import useFetcher from '../../shared/hooks/useFetcher';
 
 export default () => {
-  const { movieId } = useParams();
-  console.log(movieId);
-  const { data } = useFetcher({ url: `/movie/${movieId}` });
+  const { keywordId } = useParams();
+  console.log(keywordId);
+  const { data } = useFetcher({ url: `/keyword/${keywordId}` });
   console.log(data);
   return (
     <Page>
-            Movie
+            Keyword
     </Page>
   );
 };

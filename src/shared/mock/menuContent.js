@@ -4,19 +4,19 @@ export default [{
   list: [
     {
       title: 'showtimes & tickets',
-      link: '/filmify/showtimes',
+      link: '/showtimes',
     },
     {
       title: 'top rated movies',
-      link: '/filmify/top',
+      link: '/top',
     },
     {
       title: 'most popular movies',
-      link: '/filmify/popular',
+      link: '/popular',
     },
     {
       title: 'most popular movies',
-      link: '/filmify/movie-details/1',
+      link: '/movie-details/1',
     },
     {
       title: 'top rated movies',
@@ -30,7 +30,7 @@ export default [{
   list: [
     {
       title: 'showtimes & tickets',
-      link: '/filmify/movie-details/1',
+      link: '/movie-details/1',
     },
     {
       title: 'top rated movies',
@@ -44,7 +44,7 @@ export default [{
   list: [
     {
       title: 'showtimes & tickets',
-      link: '/filmify/movie-details/1',
+      link: '/movie-details/1',
     },
     {
       title: 'top rated movies',
@@ -58,7 +58,7 @@ export default [{
   list: [
     {
       title: 'showtimes & tickets',
-      link: '/filmify/movie-details/1',
+      link: '/movie-details/1',
     },
     {
       title: 'top rated movies',

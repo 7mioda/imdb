@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 const usePaginator = (count, nbrPerPage) => {
-  const pageCount = count / nbrPerPage;
+  const pageCount = Math.round(count / nbrPerPage);
   const history = useHistory();
   const { location: { pathname } } = history;
   const pages = new Array(pageCount).fill(1);

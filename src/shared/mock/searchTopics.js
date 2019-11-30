@@ -11,7 +11,7 @@ export default [
   },
   {
     title: 'TV Episodes',
-    value: 'person',
+    value: 'tv',
     icon: '/icons/tv.svg',
   },
   {
