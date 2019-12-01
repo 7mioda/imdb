@@ -34,5 +34,11 @@ export default (component) => styled(component)`
           }
       }
       
-      
+      @media only screen and (max-width: 700px) {
+        width: 100%;
+         .menu-content__item {
+            padding: 20px 10px;
+            width: 100%;
+          }
+      }
 `;
