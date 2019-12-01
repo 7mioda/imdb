@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Switch, Route,
 } from 'react-router-dom';
@@ -13,9 +13,14 @@ import CompanyDetails from './pages/CompanyDetails';
 import CelebrityDetails from './pages/CelebrityDetails';
 import TvShowDetails from './pages/TvShowDetails';
 import KeyWordDetails from './pages/KeyWordDetails';
+import { UiContext } from './App';
 
 export default () => {
+  const { uiState: { drawer }, setUiState } = useContext(UiContext);
   useOnRouterChange(() => {
+    if (drawer) {
+      setUiState({ drawer: false });
+    }
     window.scrollTo({
       top: 0,
       left: 0,
