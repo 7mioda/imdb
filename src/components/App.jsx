@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useReducer } from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import { BrowserRouter } from 'react-router-dom';
 import { Global } from '@emotion/core';
@@ -7,19 +7,34 @@ import AppWrapper from './AppWrapper';
 import useTheme from '../shared/hooks/useTheme';
 import Routes from './Routes';
 import Header from './organisms/Header';
+import Drawer from './molecules/Drawer/Drawer';
 
+
+export const UiContext = createContext({
+  drawer: false,
+  drawerContent: null,
+});
 
 function App() {
   const [prefersColorScheme, toggleColorScheme] = useTheme('light');
+  const [uiState, setUiState] = useReducer(
+    (current, next) => ({ ...current, ...next }),
+    { drawer: false, drawerContent: null }
+  );
   return (
     <ThemeProvider theme={getTheme(prefersColorScheme)}>
       <Global styles={restCss} />
       <AppWrapper>
-        <button className="scheme-pref-btn" type="button" onClick={toggleColorScheme}> {prefersColorScheme} </button>
-        <BrowserRouter>
-          <Header />
-          <Routes />
-        </BrowserRouter>
+        <UiContext.Provider value={{ uiState, setUiState }}>
+          <button className="scheme-pref-btn" type="button" onClick={toggleColorScheme}> {prefersColorScheme} </button>
+          <BrowserRouter>
+            <Drawer>
+              {uiState.drawerContent}
+            </Drawer>
+            <Header />
+            <Routes />
+          </BrowserRouter>
+        </UiContext.Provider>
       </AppWrapper>
     </ThemeProvider>
   );
