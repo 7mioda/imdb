@@ -7,12 +7,12 @@ export default (component) => styled(component)`
   border: 1px solid rgba(128, 128, 128, 0.32);
   display: flex;
   background-color: ${({ theme: { colors: { primary } } }) => primary};
+  height: ${({ height }) => height || '100%'};
   
-  
+
   input {
     padding: 0 1rem;
     border-style: none;
-    height: ${({ height }) => height || '100%'};
     color: ${({ theme: { colors: { tertiary } } }) => tertiary};
     font-family: inherit;
     background-color: inherit;

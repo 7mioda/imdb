@@ -12,6 +12,7 @@
     "@emotion/core": "^10.0.17",
     "@emotion/styled": "^10.0.17",
     "axios": "latest",
+    "body-scroll-lock": "^2.6.4",
     "emotion-theming": "^10.0.19",
     "lodash": "^4.17.15",
     "nprogress": "^0.2.0",
