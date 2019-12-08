@@ -32,7 +32,7 @@ const useFetcher = ({
       }
     })();
     return () => source.cancel('Operation canceled by the user.');
-  }, [queryString]);
+  }, [queryString, url]);
 
   return ({ ...state });
 };
