@@ -8,7 +8,8 @@ const Link = (props) => {
     to, className, classNames, ...rest
   } = props;
   return to ? <NavLink to={to} className={`${className} ${classNames.join(' ')}`} {...rest} />
-    : <a className={`${className} ${classNames.join(' ')}`} {...rest} />;
+  // eslint-disable-next-line jsx-a11y/anchor-has-content
+    : <a className={`${className} ${classNames.join(' ')}`} href={rest.href} {...rest} />;
 };
 
 Link.defaultProps = {
