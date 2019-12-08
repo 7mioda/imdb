@@ -59,4 +59,33 @@ export default (component) => styled(component)`
        }  
           }
     }
+    
+    @media only screen and (max-width: 650px) {
+        .movie__heading {
+            display: none;
+        }
+        
+        .movie__description {
+            padding: 0 .5rem;
+            .movie__poster {
+               width: 100%;
+               transform: translateY(0);
+              }
+              .movie__description__content {
+                width: 100%;
+                .movie__title {
+              vertical-align: center;
+              h1 {
+                font-size: 1.7rem;
+                display: inline-block;
+                margin-right: 5px;
+                }
+               h4 {
+                  font-size: 1rem;
+                  font-weight: 300;
+                  padding: 10px 0;
+                }
+              }
+         }
+    }
 `;
