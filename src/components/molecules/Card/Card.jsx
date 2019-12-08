@@ -23,7 +23,7 @@ const Card = ({ className, movie }) => (
           </div>
           <div className="movie-running-time">
             <label>Running time</label>
-            <span>2hr 33min</span>
+            <span>{movie.runtime}</span>
           </div>
         </div>
       </div>
