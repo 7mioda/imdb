@@ -48,13 +48,13 @@ export default (component) => styled(component)`
 
 .tgl-light {
   + .tgl-btn {
-    background-color: ${({ theme: { colors: { primary } } }) => primary};
+    background-color: #9fd6ae;
     border-radius: 2em;
     padding: 2px;
     transition: all 0.4s ease;
     &:after {
       border-radius: 50%;
-      background: #fff;
+      background: ${({ theme: { colors: { primary } } }) => primary};
       transition: all 0.2s ease;
     }
   }
