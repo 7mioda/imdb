@@ -14,54 +14,32 @@ export default [{
       title: 'most popular movies',
       link: '/popular',
     },
+  ],
+},
+{
+  title: 'Tv Shows',
+  icon: '/icons/tv-yellow.svg',
+  list: [
     {
-      title: 'most popular movies',
-      link: '/movie-details/1',
+      title: 'top rated Shows',
+      link: '/tv-shows/top',
     },
     {
-      title: 'top rated movies',
-      link: '',
+      title: 'most popular Shows',
+      link: '/tv-shows/popular',
     },
   ],
 },
 {
-  title: 'movies',
-  icon: '/icons/movies.svg',
+  title: 'Celebs',
+  icon: '/icons/person-yellow.svg',
   list: [
     {
-      title: 'showtimes & tickets',
-      link: '/movie-details/1',
-    },
-    {
-      title: 'top rated movies',
+      title: 'born today',
       link: '',
     },
-  ],
-},
-{
-  title: 'movies',
-  icon: '/icons/movies.svg',
-  list: [
     {
-      title: 'showtimes & tickets',
-      link: '/movie-details/1',
-    },
-    {
-      title: 'top rated movies',
-      link: '',
-    },
-  ],
-},
-{
-  title: 'movies',
-  icon: '/icons/movies.svg',
-  list: [
-    {
-      title: 'showtimes & tickets',
-      link: '/movie-details/1',
-    },
-    {
-      title: 'top rated movies',
+      title: 'most popular celebs',
       link: '',
     },
   ],

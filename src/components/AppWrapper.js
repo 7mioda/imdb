@@ -8,9 +8,10 @@ export default styled.div`
     width: 100%;
     .scheme-pref-btn {
       position: absolute;
-      top: 100px;
-      left: 5px;
+      right: 0;
+      top: 16px;
       z-index: 1;
+      transform: rotate(90deg);
     }
     .fade-enter {
       opacity: 0;
