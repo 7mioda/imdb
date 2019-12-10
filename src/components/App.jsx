@@ -8,6 +8,7 @@ import useTheme from '../shared/hooks/useTheme';
 import Routes from './Routes';
 import Header from './organisms/Header';
 import Drawer from './molecules/Drawer/Drawer';
+import ThemeButton from './molecules/ThemeButton';
 
 
 export const UiContext = createContext({
@@ -26,7 +27,7 @@ function App() {
       <Global styles={restCss} />
       <AppWrapper>
         <UiContext.Provider value={{ uiState, setUiState }}>
-          <button className="scheme-pref-btn" type="button" onClick={toggleColorScheme}> {prefersColorScheme} </button>
+          <ThemeButton className="scheme-pref-btn" onClick={toggleColorScheme} />
           <BrowserRouter>
             <Drawer>
               {uiState.drawerContent}

@@ -10,7 +10,7 @@ const getImg = (base, ...paths) => {
 };
 
 const paths = {
-  tv: '/tv-details/',
+  tv: '/tv-shows/show-details/',
   person: '/celebrity-details/',
   company: '/company-details/',
   keyword: '/keyword-details/',
