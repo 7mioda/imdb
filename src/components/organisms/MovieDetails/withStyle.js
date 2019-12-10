@@ -10,6 +10,7 @@ export default (component) => styled(component)`
       height: 30vw;
       background:  url(${({ movie: { backdrop_path: backdropPath } }) => `https://image.tmdb.org/t/p/original/${backdropPath}`}) top / cover no-repeat;
       clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+
     }
     .movie__description {
        padding: 0 2rem;
