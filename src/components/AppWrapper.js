@@ -13,13 +13,4 @@ export default styled.div`
       z-index: 1;
       transform: rotate(90deg);
     }
-    .fade-enter {
-      opacity: 0;
-      z-index: 1;
-    }
-    .fade-enter.fade-enter-active {
-      opacity: 1;
-      transition: opacity 250ms ease-in;
-    }
-
 `;

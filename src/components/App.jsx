@@ -22,6 +22,7 @@ function App() {
     (current, next) => ({ ...current, ...next }),
     { drawer: false, drawerContent: null }
   );
+  const { drawerContent } = uiState;
   return (
     <ThemeProvider theme={getTheme(prefersColorScheme)}>
       <Global styles={restCss} />
@@ -30,7 +31,7 @@ function App() {
           <ThemeButton className="scheme-pref-btn" onClick={toggleColorScheme} />
           <BrowserRouter>
             <Drawer>
-              {uiState.drawerContent}
+              {drawerContent}
             </Drawer>
             <Header />
             <Routes />
