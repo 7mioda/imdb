@@ -39,7 +39,7 @@ workflows:
   build-deploy:
     jobs:
       - build
-        context: SonarCloud
+          context: SonarCloud
       - deploy:
           requires:
             - build
