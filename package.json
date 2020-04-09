@@ -5,12 +5,17 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "./node_modules/.bin/eslint \"./**/*.js\"",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test",
+    "lint": "./node_modules/.bin/eslint \"./**/*.js\"",
+    "eject": "react-scripts eject",
+    "pre-push": "git branch | grep \"*\" | egrep -v \"^* master$\""
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
     "@emotion/styled": "^10.0.17",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
     "axios": "latest",
     "body-scroll-lock": "^2.6.4",
     "emotion-theming": "^10.0.19",
@@ -21,10 +26,10 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "react-transition-group": "^4.3.0"
+    "react-scripts": "3.3.0"
   },
   "devDependencies": {
+    "husky": "^4.2.4",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "2.14.0",
