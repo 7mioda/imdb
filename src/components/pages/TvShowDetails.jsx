@@ -1,18 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { get } from 'lodash';
 import Page from '../organisms/Page/Page';
 import useFetcher from '../../shared/hooks/useFetcher';
-import {get} from "lodash";
+import ShowDetails from '../organisms/ShowDetails/ShowDetails';
+
 
 export default () => {
   const { showId } = useParams();
-  console.log(showId);
   const { data } = useFetcher({ url: `/tv/${showId}` });
-  console.log(data);
-  const name = get(data, 'name', 'Celebrity');
+  const name = get(data, 'title', 'Tv-Show Details');
   return (
     <Page title={`${name} - IMDb`}>
-            Tv Show
+      { data && <ShowDetails show={data} />}
     </Page>
   );
 };

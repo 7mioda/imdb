@@ -6,7 +6,7 @@ export default (component) => styled(component)`
         height: 100vh;
         width: 280px;
         background-color: ${({ theme: { colors: { secondary } } }) => secondary};
-        transform: translateX(-100%);
+        transform: translateX(-110%);
         z-index: 10;
         transition: .3s  ease-in transform;
         position: absolute;

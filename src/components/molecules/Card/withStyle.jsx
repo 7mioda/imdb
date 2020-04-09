@@ -6,8 +6,7 @@ export default (component) => styled(component)`
     background: #ffffff;
     color: #000;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 300px;
+    width: 300px;
     margin: .5rem;
     border-radius: 1px;
     display: inline-block;
